@@ -31,11 +31,11 @@ const Footer = () => {
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
             </div>
             <div className="footer-subscribe">
-              <h3>Subscribe to get important updates</h3>
+              <h3>any query? write your query</h3>
               <form action="#">
-                <input type="email" name="email" placeholder="YOUR E-MAIL" />
+                <input type="text" name="email" placeholder="write query" />
 
-                <input type="submit" value="subscribe" />
+                <input type="submit" value="submit" />
               </form>
             </div>
             <div className="footer-social">
