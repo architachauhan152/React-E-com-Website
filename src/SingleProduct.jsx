@@ -96,6 +96,10 @@ const SingleProduct = () => {
               <p>
                 Brand :<span> {company} </span>
               </p>
+              <p>
+                Brand Owner :<span>Ritu Chauhan</span>
+              </p>
+
             </div>
             <hr />
             {stock > 0 && <AddToCart product={singleProduct} />}
