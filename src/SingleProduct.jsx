@@ -59,7 +59,7 @@ const SingleProduct = () => {
             <p className="product-data-price">
               MRP:
               <del>
-                <FormatPrice price={price + 250000} />
+                <FormatPrice price={ price * 10 } />
               </del>
             </p>
             <p className="product-data-price product-data-real-price">

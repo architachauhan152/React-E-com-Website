@@ -25,7 +25,8 @@ const HeroSection = ({ myData }) => {
           <div className="hero-section-image">
             <figure>
               <img
-                src="https://images.pexels.com/photos/3985071/pexels-photo-3985071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                // src="https://images.pexels.com/photos/3985071/pexels-photo-3985071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="https://img.freepik.com/free-photo/young-couple-pointing-window-shopping_329181-1755.jpg?w=826&t=st=1682824274~exp=1682824874~hmac=c4a4febc32f263074bdf6d47742b5e7f6e8c317b95a784f7e484f7ce4096367c"
 
                 alt="hero-section-photo"
                 className="img-style"

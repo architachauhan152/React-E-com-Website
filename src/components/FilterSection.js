@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useFilterContext } from "../context/filter_context";
 
 const FilterSection = () => {
-  const {filters:{text,updateFilterValue}}=useFilterContext()
+  const {filters:{text}, updateFilterValue}=useFilterContext();
   return (
     <Wrapper>
       <div className="filter-search">
@@ -13,7 +13,7 @@ const FilterSection = () => {
             name="text"
             placeholder="Search"
             value={text}
-            onchange={updateFilterValue}
+            onChange={updateFilterValue}
           />
         </form>
       </div>

@@ -1,5 +1,6 @@
 
 const FormatPrice = ({ price }) => {
+  
   return Intl.NumberFormat("en-IN", {
     style:"currency",
     currency:"INR",
@@ -9,4 +10,4 @@ const FormatPrice = ({ price }) => {
   
 }
 
-export default FormatPrice
+export default FormatPrice;
