@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <MainHeader>
       <NavLink to="/">
-        <img src="https://tse4.mm.bing.net/th?id=OIP.Hq41eSyRqD6qNRoZDPqtogHaI0&pid=Api&P=0" className="logo" alt="my logo img" />
+        <img src="https://cdn.mesto.ru/uploads/post/news/wide_picture/12049/%D0%9C%D0%A0__1_.png" className="logo" alt="my logo img" />
       </NavLink>
       <Nav />
     </MainHeader>
@@ -24,7 +24,7 @@ height:100vh;
   align-items: center;
   position: relative;
   .logo {
-    height: 7rem;
+    height: 5rem;
     width:15rem;
   }
 `;

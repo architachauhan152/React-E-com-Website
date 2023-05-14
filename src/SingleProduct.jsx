@@ -38,7 +38,7 @@ const SingleProduct = () => {
   }, []);
 
   if (isSingleLoading) {
-    return <div>Loading.....</div>;
+    return <h1>Loding......</h1>;
   }
 
   return (
@@ -53,17 +53,17 @@ const SingleProduct = () => {
 
           {/* product dAta  */}
           <div className="product-data">
-            <h2>{name}</h2>
+            <h2>{name} (MR Group)</h2>
             <Star stars={stars} reviews={reviews} />
 
             <p className="product-data-price">
               MRP:
               <del>
-                <FormatPrice price={ price * 10 } />
+                <FormatPrice price={ price * 10} />
               </del>
             </p>
             <p className="product-data-price product-data-real-price">
-              Deal of the Day: <FormatPrice price={price} />
+              Deal of the Day: <FormatPrice price={price}/>
             </p>
             <p>{description}</p>
             <div className="product-data-warranty">
@@ -97,7 +97,7 @@ const SingleProduct = () => {
                 Brand :<span> {company} </span>
               </p>
               <p>
-                Brand Owner :<span>Ritu Chauhan</span>
+                Brand Owner : <span>MR Bhardwaj</span>
               </p>
 
             </div>

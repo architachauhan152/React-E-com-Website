@@ -6,7 +6,7 @@ import FeatureProduct from "./components/FeatureProduct";
 
 const Home = () => {
   const data = {
-    name: "Ritu Store",
+    name: "MR Group",
   };
 
   return <>
