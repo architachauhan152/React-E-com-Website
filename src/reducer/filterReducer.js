@@ -24,6 +24,7 @@ const filterReducer = (state, action) => {
         "🚀 ~ file: filterReducer.js ~ line 23 ~ filterReducer ~ maxPrice",
         maxPrice
       );
+
       return {
         ...state,
         filter_products: [...action.payload],
@@ -31,18 +32,18 @@ const filterReducer = (state, action) => {
         filters: { ...state.filters, maxPrice, price: maxPrice },
       };
 
-
-
     case "SET_GRID_VIEW":
       return {
         ...state,
         grid_view: true,
       };
+
     case "SET_LIST_VIEW":
       return {
         ...state,
         grid_view: false,
       };
+
     case "GET_SORT_VALUE":
       // let userSortValue = document.getElementById("sort");
       // let sort_value = userSortValue.options[userSortValue.selectedIndex].value;
@@ -82,6 +83,7 @@ const filterReducer = (state, action) => {
         ...state,
         filter_products: newSortData,
       };
+
     case "UPDATE_FILTERS_VALUE":
       const { name, value } = action.payload;
 
@@ -92,30 +94,37 @@ const filterReducer = (state, action) => {
           [name]: value,
         },
       };
+
     case "FILTER_PRODUCTS":
       let { all_products } = state;
       let tempFilterProduct = [...all_products];
-      const { text, category, company,color,price  } = state.filters;
+
+      const { text, category, company, color, price } = state.filters;
+
       if (text) {
         tempFilterProduct = tempFilterProduct.filter((curElem) => {
           return curElem.name.toLowerCase().includes(text);
         });
       }
+
       if (category !== "all") {
-        tempFilterProduct = tempFilterProduct.filter((curElem) => {
-          return curElem.category === category;
-        });
+        tempFilterProduct = tempFilterProduct.filter(
+          (curElem) => curElem.category === category
+        );
       }
+
       if (company !== "all") {
-        tempFilterProduct = tempFilterProduct.filter((curElem) => {
-          return curElem.company === company;
-        });
+        tempFilterProduct = tempFilterProduct.filter(
+          (curElem) => curElem.company.toLowerCase() === company.toLowerCase()
+        );
       }
+
       if (color !== "all") {
         tempFilterProduct = tempFilterProduct.filter((curElem) =>
           curElem.colors.includes(color)
         );
       }
+
       if (price === 0) {
         tempFilterProduct = tempFilterProduct.filter(
           (curElem) => curElem.price == price
@@ -144,10 +153,6 @@ const filterReducer = (state, action) => {
           minPrice: state.filters.maxPrice,
         },
       };
-
-
-
-
 
     default:
       return state;

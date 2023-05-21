@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer ,useEffect } from "react";
 import reducer from "../reducer/cartReducer";
 
 const CartContext = createContext();
@@ -20,6 +20,13 @@ const CartProvider = ({ children }) => {
   const removeItem = (id) => {
     dispatch({ type: "REMOVE_ITEM", payload: id });
   };
+
+  // to add the data in local storage
+
+  useEffect(() =>{
+    localStorage.setItem("rituCart",JSON.stringify(state.cart))
+  })
+
 
   return (
     <CartContext.Provider value={{ ...state, addToCart, removeItem }}>
